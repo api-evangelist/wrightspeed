@@ -1,7 +1,19 @@
 aid: wrightspeed
 name: Wrightspeed
-description: 'Wrightspeed is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Wrightspeed is an electric-powertrain manufacturer in Alameda, California, founded in
+  2005 by Tesla co-founder Ian Wright and rebranded as REVO Powertrains in May 2022. Its
+  product is the RePower Platform, a "Powertrain-in-a-Crate" retrofit kit that converts
+  existing diesel Class 6 and 7 trucks and buses into battery-electric vehicles by
+  replacing the legacy motor, transmission, rear axle, cooling, HVAC and fuel systems with
+  an integrated e-axle, high-voltage battery, electrical harness, instrument cluster and a
+  Vehicle Dynamics Module carrying traction control, diagnostics, telematics and
+  over-the-air updates. Wrightspeed is a hardware company: the software it ships is
+  embedded in the vehicle and sold with the kit. It publishes an eight-page Webflow
+  marketing site (platform, about, careers, contact, reserve, terms, privacy) and no
+  developer portal, API, SDK, webhook surface or machine-readable specification of any
+  kind.
+image: https://cdn.prod.website-files.com/62728468a38f7f666a7299db/640b50b3a86b83ebb3017799_wrightspeed_logo.png
 url: https://raw.githubusercontent.com/api-evangelist/wrightspeed/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +24,13 @@ created: '2026-09-04'
 modified: '2026-09-04'
 tags:
 - Company
+- Automotive
+- Electric Vehicles
+- Powertrains
+- Commercial Fleets
+- Manufacturing
+- Transportation
+- Hardware
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +39,61 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.wrightspeed.com/
+- type: Product
+  name: RePower Platform
+  url: https://www.wrightspeed.com/repower-tm-platform
+- type: About
+  url: https://www.wrightspeed.com/about-us
+- type: Contact
+  url: https://www.wrightspeed.com/contact
+- type: Careers
+  url: https://www.wrightspeed.com/careers
+- type: TermsOfService
+  url: https://www.wrightspeed.com/terms
+- type: PrivacyPolicy
+  url: https://www.wrightspeed.com/privacy-policy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/revopowertrains
+- type: Facebook
+  url: https://www.facebook.com/wrightspeedpowertrains
+- type: DomainSecurity
+  url: security/wrightspeed-domain-security.yml
+- type: LLMsTxt
+  url: llms/wrightspeed-llms.txt
+x-enrichment:
+  date: '2026-09-04'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Wrightspeed builds physical electric-powertrain retrofit kits, not software —
+    wrightspeed.com is an eight-page Webflow marketing site (platform, about, careers,
+    contact, reserve, terms, privacy) whose own sitemap.xml lists no developer page, where
+    /developers, /developer, /api, /docs, /openapi.json and /llms.txt all return a real
+    404, where 27 /.well-known/ probes across wrightspeed.com, www.wrightspeed.com and the
+    successor domain revopowertrains.com all returned 404, and where certificate
+    transparency shows no api./docs./developer. host has ever existed.
+  evidence:
+  - url: https://www.wrightspeed.com/
+    status: 200
+  - url: https://www.wrightspeed.com/sitemap.xml
+    status: 200
+  - url: https://www.wrightspeed.com/developers
+    status: 404
+  - url: https://www.wrightspeed.com/openapi.json
+    status: 404
+  - url: https://www.wrightspeed.com/api-docs
+    status: 404
+  - url: https://www.wrightspeed.com/llms.txt
+    status: 404
+  - url: https://www.wrightspeed.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.wrightspeed.com/.well-known/agent-card.json
+    status: 404
+  - url: https://revopowertrains.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-09-04'

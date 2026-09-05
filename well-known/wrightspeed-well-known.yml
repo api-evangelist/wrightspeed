@@ -1,0 +1,79 @@
+generated: '2026-09-04'
+method: probed
+source: >-
+  Anonymous HTTPS probes of the RFC 8615 /.well-known/ namespace on every host this record
+  knows — the registrable domain wrightspeed.com and its www host, plus revopowertrains.com,
+  the domain Wrightspeed rebranded to as REVO Powertrains in May 2022. There are no API
+  baseURL hosts and no OpenAPI servers[] hosts to probe: Wrightspeed publishes no API.
+note: >-
+  Every path on every host returned HTTP 404. The wrightspeed.com origin answers any
+  /.well-known/* path with a real 404 carrying the body "Invalid .well-known request", so
+  these are genuine absences rather than a catch-all soft-200. NO WellKnown, SecurityTxt or
+  AgentCard pointer is wired in apis.yml, because nothing was served — this file records a
+  measured absence, not a published surface.
+hosts:
+- host: www.wrightspeed.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+- host: wrightspeed.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+- host: revopowertrains.com
+  note: >-
+    Successor brand domain. It presents a TLS certificate that does not match the hostname
+    and, once that is bypassed, serves the stock "HTTP Server Test Page powered by
+    CentOS-WebPanel.com" default page rather than a site.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+checked: '2026-09-04'
